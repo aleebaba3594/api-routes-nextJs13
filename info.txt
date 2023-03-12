@@ -1,0 +1,30 @@
+
+in app>api folder make a folder name by which we want to make route, after making the 
+folder(with naming convention),we make route.ts in that folder.
+
+
+--> for nested routing we do the same inside of that folder we make another folder and 
+    in that folder we also have to make route.ts
+ example 
+-->app>api>route1>route2
+   route1 and route 2, both contains the route.ts files.
+
+   after getting the request we will return response like
+   return new Response('Hello, Next.js!')
+-->but if we want to send json object we send response like this.
+  return NextResponse.json({ hello: 'Next.js' })
+we also have to import { NextResponse } from 'next/server'
+
+by getting id or etc we have to make [id] folder name and inside it route.ts
+if we have to get multipe data from params we make folder like this
+
+[...id] folder name
+
+in this folder make route.ts and log the params
+we can get multiple data but the name used in [...id] foldet and params.id must be same
+params.id[0],params.id[1] 
+like this we can get multiple data
+
+
+
+
